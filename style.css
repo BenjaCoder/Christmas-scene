@@ -1,0 +1,108 @@
+:root {
+    --sky-dark: #224
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sky {
+    width: 100vw;
+    height: 70vh;
+    background: linear-gradient(var(--sky-dark) 70%, #444466 95%, #555577);
+}
+
+.moon-outer {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: radial-gradient(circle, #fff, #ee0);
+    border-radius: 50%;
+    top: 5%;
+    left: 5%;
+}
+
+.moon-inner {
+    position: absolute;
+    width: 86%;
+    height: 86%;
+    /* background: linear-gradient(135deg, #223, var(--sky-dark)); */
+    background: var(--sky-dark);
+    border-radius: 50%;
+    top: 2%;
+    left: 25%;
+}
+
+.tree {
+    position: absolute;
+    width: 20%;
+    height: 50%;
+    z-index: 1;
+}
+
+.trunk {
+    position: inherit;
+    width: 0;
+    height: 0;
+    border: 30px solid #480812;
+    border-color: transparent transparent #480812 transparent;
+    border-top-width: 20px;
+    border-bottom-width: 260px;
+    border-left-width: 30px;
+    border-right-width: 30px;
+}
+
+.leaves1 {
+    position: inherit;
+    width: 0;
+    height: 0;
+    border: 30px solid #113511;
+    border-color: transparent transparent #113311 transparent;
+    border-top-width: 20px;
+    border-bottom-width: 160px;
+    border-left-width: 80px;
+    border-right-width: 80px;
+    top: 10%;
+    left: -32%;
+}
+.leaves2 {
+    position: inherit;
+    width: 0;
+    height: 0;
+    border: 30px solid #113511;
+    border-color: transparent transparent #113511 transparent;
+    border-top-width: 20px;
+    border-bottom-width: 120px;
+    border-left-width: 70px;
+    border-right-width: 70px;
+    top: 5%;
+    left: -25%;
+}
+.leaves3 {
+    position: inherit;
+    width: 0;
+    height: 0;
+    border: 30px solid #113511;
+    border-color: transparent transparent #113711 transparent;
+    border-top-width: 20px;
+    border-bottom-width: 80px;
+    border-left-width: 60px;
+    border-right-width: 60px;
+    top: 0%;
+    left: -19%;
+}
+
+.t1 {
+    top: 45%;
+    left: 13%;
+}
+
+.ground {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    background: radial-gradient(circle, #262, #141);
+    bottom: 0;
+}
