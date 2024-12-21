@@ -3,40 +3,47 @@
 }
 
 body {
-    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
     padding: 0;
     overflow: hidden;
+    animation: darken 12s ease-in infinite;
 }
 
 .sky {
-    width: 100vw;
-    height: 70vh;
+    width: 100%;
+    height: 70%;
     background: linear-gradient(var(--sky-dark) 70%, #444466 95%, #505072);
+}
+
+.message {
+    position: absolute;
+    text-align: center;
+    right: 15%;
+    top: 140px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 64px;
+    font-style: italic;
+    z-index: 105;
+    opacity: 0%;
+    animation: appear 12s infinite;
+
 }
 
 .moon-outer {
     position: absolute;
-    width: 20%;
-    height: 20%;
-    background: radial-gradient(circle, #fff, #ee0);
+    width: 18vh;
+    height: 18vh;
+    background: radial-gradient(circle, #fff, #ee1);
     border-radius: 50%;
-    top: 5%;
-    left: 5%;
+    top: 45px;
+    left: 45px;
     /* box-shadow: -4px 0 8px 5px white, -5px 0 11px 4px #33f, -6px 0 14px 5px #118,
         -10px 0 18px 15px #335; */
     box-shadow: -0 0 12px 5px white, 0 0 28px 5px #aaf, 0 0 48px 25px #88e;
 }
 
-.moon-inner {
-    position: absolute;
-    width: 86%;
-    height: 86%;
-    /* background: linear-gradient(135deg, #223, var(--sky-dark)); */
-    background: 323252;
-    border-radius: 50%;
-    top: 2%;
-    left: 25%;
-}
 .moonglow {
     width: 100%;
     height: 100%;
@@ -72,9 +79,10 @@ body {
     border-bottom-width: 160px;
     border-left-width: 80px;
     border-right-width: 80px;
-    top: 10%;
-    left: -32%;
+    top: 35px;
+    left: -50.5px;
 }
+
 .leaves2 {
     position: inherit;
     width: 0;
@@ -85,9 +93,10 @@ body {
     border-bottom-width: 120px;
     border-left-width: 70px;
     border-right-width: 70px;
-    top: 5%;
-    left: -25%;
+    top: 20px;
+    left: -40px;
 }
+
 .leaves3 {
     position: inherit;
     width: 0;
@@ -98,8 +107,8 @@ body {
     border-bottom-width: 90px;
     border-left-width: 60px;
     border-right-width: 60px;
-    top: 0%;
-    left: -19%;
+    top: 0px;
+    left: -29.5px;
 }
 
 .t1 {
@@ -186,18 +195,18 @@ body {
 
 .bigtree {
     top: 33%;
-    left: 47.3%;
+    left: 53.4%;
     scale: 1.8;
     z-index: 100;
 }
 
 .present1 {
     position: absolute;
-    width: 12%;
-    height: 9%;
+    width: 90px;
+    height: 67px;
     background-color: darkblue;
-    top: 74%;
-    left: 32%;
+    top: 550px;
+    left: 40vw;
     z-index: 101;
 }
 
@@ -223,12 +232,24 @@ body {
 
 .present2 {
     position: absolute;
-    width: 9%;
-    height: 16%;
+    width: 67px;
+    height: 120px;
     background-color: #414;
-    top: 70%;
+    top: 520px;
     left: 53%;
     z-index: 101;
+}
+
+.present3 {
+    position: absolute;
+    width: 190px;
+    height: 40px;
+    background: repeating-linear-gradient(90deg, gold, gold 10%, purple 10%, purple 20%);
+    border-radius: 8px;
+    top: 590px;
+    left: 40%;
+    transform: rotate(-40deg);
+    z-index: 102;
 }
 
 .ground {
@@ -238,4 +259,25 @@ body {
     background: radial-gradient(circle, #181, #121);
     bottom: 0;
     z-index: -10;
+}
+
+@keyframes darken {
+    0% {
+        filter:grayscale(100%)
+    }
+    50% {
+        filter:grayscale(0%)
+    }
+    100% {
+        filter:grayscale(0%)
+    }
+}
+
+@keyframes appear {
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
